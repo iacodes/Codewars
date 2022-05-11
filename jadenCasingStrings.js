@@ -8,7 +8,27 @@ Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 */
 
 String.prototype.toJadenCase = function(str) {
-  this.str = str
-  let words = this.str.split(' ')
-  return words.forEach(word => concat(str.charAt(0).toUpperCase(),word.subString(1).toLowerCase()) )
+  let words = str.split(' ')
+  console.log(words)
+  let jadenized = []
+  words.forEach(word => {
+    let newWord = word.charAt(0).toUpperCase()+word.substring(1).toLowerCase()
+    jadenized.push(newWord)
+  })
+
+  return jadenized.join(" ")
 };
+
+
+//The function below works. Need to convert to extend string class / add new string method
+// function jaden(str){}
+//   let words = str.split(' ')
+//   console.log(words)
+//   let jadenized = []
+//   words.forEach(word => {
+//     let newWord = word.charAt(0).toUpperCase()+word.substring(1).toLowerCase()
+//     jadenized.push(newWord)
+//   })
+//
+//   return jadenized.join(" ")
+// };
