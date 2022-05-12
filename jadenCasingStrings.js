@@ -7,9 +7,8 @@ Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
 */
 
-String.prototype.toJadenCase = function(str) {
-  let words = str.split(' ')
-  console.log(words)
+String.prototype.toJadenCase = function() {
+  let words = this.split(' ')  //what was missing here was the this. This is how the string is passed and not as a parameter in function
   let jadenized = []
   words.forEach(word => {
     let newWord = word.charAt(0).toUpperCase()+word.substring(1).toLowerCase()
@@ -17,11 +16,11 @@ String.prototype.toJadenCase = function(str) {
   })
 
   return jadenized.join(" ")
-};
+}
 
 
-//The function below works. Need to convert to extend string class / add new string method
-// function jaden(str){}
+// //The function below works. Need to convert to extend string class / add new string method
+// function jaden(str){
 //   let words = str.split(' ')
 //   console.log(words)
 //   let jadenized = []
