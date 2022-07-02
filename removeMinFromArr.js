@@ -6,14 +6,31 @@ function removeSmallest(numbers) {
   //throw "TODO: removeSmallest";
   let smallest = Math.min(...numbers)
 
-  for (i = 0; i< numbers.length; i++){
-     if (numbers[i] == smallest){
+  let newArr = numbers.map(x => x)
 
-          numbers.splice(i, 1);
-         console.log()
+  for (i = 0; i< newArr.length; i++){
+     if (newArr[i] == smallest){
+
+          newArr.splice(i, 1);
          break
 
     }
   }
-  return numbers
+return newArr
 }
+
+
+/*Alternative solutions
+function removeSmallest(numbers) {
+  let indexOfMin = numbers.indexOf(Math.min(...numbers));
+  return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
+}
+
+
+
+function removeSmallest(numbers) {
+  const min = Math.min.apply(this, numbers);
+  return numbers.filter((num, idx, arr) => idx !== arr.indexOf(min));
+}
+
+ */
