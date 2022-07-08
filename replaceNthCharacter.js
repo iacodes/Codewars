@@ -17,9 +17,19 @@ If n is 0 or negative or if it is larger than the count of the oldValue, return 
 function replaceNth(text, n, oldValue, newValue) {
   let occ = 1;
 
+  if (n <= 0){
+    return text
+  }
+  let countofOldValue = text.split("").map((x,i)=> text[i]===oldValue).length
+
+  if (n > countofOldValue){
+    return text
+  }
+
+
   return text.split("").map(x => {
     if (x === oldValue){
-       if (occ%n==0 && n>1){
+       if (occ%n==0){
          x=newValue;
        }
       occ++
