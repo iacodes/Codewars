@@ -8,7 +8,8 @@ You should not remove or add elements from/to the array.
 */
 
 function twoSort(s) {
-  return s.sort((a,b)=> a-b)[0].split("").map((x,i,a) => {
+  //return s.sort((a,b)=> a-b)[0].split("").map((x,i,a) => { //for sorting array of strings, sort method can be used alone.
+  return s.sort()[0].split("").map((x,i,a) => {
       if (i < a.length-1){
           return x+"***"
       }
