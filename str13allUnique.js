@@ -8,3 +8,17 @@ The string may contain any of the 128 ASCII characters. Characters are case-sens
 function hasUniqueChars(str){
   return new Set(str.split("")).size == str.split("").length
 }
+
+
+/*Other solutions
+
+function hasUniqueChars(str){
+  return str.split('').every(function(v, i, arr){
+    return arr.indexOf(v) == i;
+  });
+}
+
+function hasUniqueChars(str){
+  return str.split('').every(function(i, j){ return j == str.lastIndexOf(i) })
+}
+*/
