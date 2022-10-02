@@ -16,6 +16,8 @@ http://stackoverflow.com/questions/6093874/why-doesnt-the-sort-function-of-javas
 
 
 function flattenAndSort(array) {
-  
-  return array;
+  let returnArr = []
+  let intArr = []
+  array.forEach(x => x.forEach(y => intArr.push(y)))
+  return intArr.sort((a,b)=>a - b);
 }
