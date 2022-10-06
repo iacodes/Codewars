@@ -6,3 +6,8 @@ Given a non-empty array of integers, return the result of multiplying the values
 function grow(x){
   return x.reduce((acc, item) => acc*item, acc=1)
 }
+
+/*
+
+
+*/

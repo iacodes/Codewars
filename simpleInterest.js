@@ -15,3 +15,8 @@ number of time periods will be an integer between 0 and 50
 function interest(P,r,n) {
   return [Math.round(P+P*r*n), Math.round(P*(1+r)**n)]
 }
+
+
+//
+
+//let interest = (P, r, n) => [P * (1 + r * n), P * Math.pow(1 + r, n)].map(Math.round);

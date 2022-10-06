@@ -40,6 +40,8 @@ function alexMistakes(numberOfKata, timeLimit){
 }
 
 /*
+Alternative solutions
+
 function alexMistakes(numberOfKata, timeLimit, time = 5, times = 0) {
   let minPerKata = (60 / 10) * numberOfKata;
 

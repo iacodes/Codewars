@@ -1,0 +1,19 @@
+//Rotate a matrix 90 degree to the left. The matrix is an array of integers with dimension n,m
+
+/*Example:
+Input: {{-1, 4, 5},
+        { 2, 3, 4}}
+
+Output: {{ 5, 4},
+         { 4, 3},
+         {-1, 2}}
+
+*/
+
+//for a matrix of 1, 2, 3, n rows and 1, 2, m columns,
+//the last element of first row, becomes first column
+//the last element of second row becomes second column
+
+var rotateMatrix = matrix => {
+    return matrix[0].map((col, i) => matrix.map(row => row[col]));
+}

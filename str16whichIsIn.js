@@ -52,13 +52,12 @@ function inArray(array1,array2){
 /*
 Other solutions
 function inArray(array1,array2){
-    return array1.filter(function(value){return (array2.join('-').indexOf(value))!=-1}).sort();
+    return array1.filter(value => (array2.join('-').indexOf(value))!=-1).sort();
 }
 
+
 function inArray(array1, array2) {
-  return array1.filter(function(word) {
-    return array2.join(' ').includes(word);
-  }).sort();
+  return array1.filter( word => array2.join(' ').includes(word)).sort()
 }
 
 

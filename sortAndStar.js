@@ -18,3 +18,8 @@ function twoSort(s) {
       }
   }).join("")
 }
+
+
+/*Alternative solutions
+const twoSort = s =>  s.sort()[0].split('').join('***');
+*/

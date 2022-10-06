@@ -66,7 +66,7 @@ function makeClass(...params) {
   function makeClass(...properties) {
   return function() {
     for (let i = 0; i < arguments.length; i++)
-      this[properties[i]] = arguments[i];
+      this[properties[i]] = arguments[i];  //arguments is a reserved words
   }
 }
 */

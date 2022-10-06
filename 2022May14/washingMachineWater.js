@@ -20,3 +20,7 @@ function howMuchWater(water, load, clothes){
     return Math.round((amountWater)*100)/100
   }
 }
+
+//solution
+const howMuchWater = (water, load, clothes) =>
+  clothes < load ? `Not enough clothes` : clothes > 2 * load ? `Too much clothes` : Math.round(water * 1.1 ** (clothes - load) * 1e2) / 1e2;
