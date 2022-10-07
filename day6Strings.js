@@ -5,10 +5,10 @@ Write a function that, when given a non-empty string, and positive integer X, re
 
 function removeNthChar(str, num){
     let arr = str.split("")
-    if (arr.length > 0){
+    if (str.length > 0){
         for (i=0; i< arr.length; i++){
-            if (i>0 && (i+1)%num==0){
-              arr.splice(i,1)
+            if (i>0 && i%(num-1)==0){
+                arr.splice(i,1)
             }
         }
     }
