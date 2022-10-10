@@ -2,4 +2,17 @@
 
 
 function multipleOfIndex(array) {
+  let returnArr = []
+  array.map((x,i) => {if (x%i ==0){
+    returnArr.push(x)
+    return returnArr
+  }})
+  return returnArr
 }
+
+
+/*Other solutions
+function multipleOfIndex(array) {
+  return array.filter((num, i) => num % i === 0);
+}
+*/
