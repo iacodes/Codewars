@@ -15,5 +15,16 @@ Output: {{ 5, 4},
 //the last element of second row becomes second column
 
 var rotateMatrix = matrix => {
-    return matrix[0].map((col, i) => matrix.map(row => row[col]));
+  let returnMatrix = []
+
+  for (i=0; i < matrix.length; i++){
+    for (k=0; k < matrix[i].length; k++){
+      returnMatrix.push(matrix[i][k])
+    }
+  }
+
+
+
+  return returnMatrix
+
 }
