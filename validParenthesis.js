@@ -61,27 +61,22 @@ function validParentheses(parentStr) {
   if (parentStrArray.length %2 != 0){
     return false
   }
-
-  if (parentStrArray[0] == ")" ){
+  else if (parentStrArray[0] == ")" ){
     return false
   }
-
-
-  if ( parentStrArray.length==2 && parentStrArray[0] == "(" && parentStrArray[1]==")"){
-    console.log(`the first element is ${parentStrArray[0]} which the same as in quotes "(", the first second is ${parentStrArray[1]} which the same as in quotes ")" and the array length is ${parentStrArray.length} so return true`)
+  else if ( parentStrArray.length==2 && parentStrArray[0] == "(" && parentStrArray[1]==")"){
       return true
   }
   else if (parentStrArray.length==2 && parentStrArray[0] != "(" && parentStrArray[1]!=")"){
-    console.log(`the first element is ${parentStrArray[0]} which the same as in quotes ")", the first second is ${parentStrArray[1]} which the same as in quotes "(" while the array length is ${parentStrArray.length} so return false`
     return false
   }
-
-  for (i=0; i<=parentStrArray.length; i++){
-    if ( parentStrArray[i] == "(" && parentStrArray[i+1]==")"){
-      parentStrArray.splice(i,2)
-          console.log("Recursion!!")
-      validParentheses(parentStrArray.join(""))
+  else {
+    for (i=0; i<parentStrArray.length-1; i++){
+      if ( parentStrArray[i] == "(" && parentStrArray[i+1]==")"){
+        parentStrArray.splice(i,2)
+        return validParentheses(parentStrArray.join(""))
+        //recursive functions should have return statement otherwise, the function would make the recursive call but wouldn't return the value of that call to the calling function. The return statement allows the function to return the value of the recursive call to the calling function, and to propagate that value back up the call stack until the original call is reached.
+      }
     }
-
   }
 }
